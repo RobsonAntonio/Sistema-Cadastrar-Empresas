@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulario" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c438a748-99a3-4ca5-8d30-3af1b730a8d3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="amFzcGVyc3R1ZGlvICwxNSwxNSxhMjlhOGYyZC01YzA2LTQ0MTAtOGE0OS02OTUxYTI0MjYwOGM7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sistema"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT sistema.cadastro.`Nome_Empresa`,
+	sistema.cadastro.`Nota_Fiscais`,
+	sistema.cadastro.`Valor_Pago`,
+	sistema.cadastro.`ID_Cadastro`,
+	sistema.cadastro.`Data`,
+	sistema.cadastro.`Valor_NF`
+FROM sistema.cadastro]]>
+	</queryString>
+	<field name="Nome_Empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Nome_Empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastro"/>
+	</field>
+	<field name="Nota_Fiscais" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Nota_Fiscais"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastro"/>
+	</field>
+	<field name="Valor_Pago" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="Valor_Pago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastro"/>
+	</field>
+	<field name="ID_Cadastro" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="ID_Cadastro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastro"/>
+	</field>
+	<field name="Data" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Data"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastro"/>
+	</field>
+	<field name="Valor_NF" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="Valor_NF"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cadastro"/>
+	</field>
+	<group name="Nome_Empresa">
+		<groupExpression><![CDATA[$F{Nome_Empresa}]]></groupExpression>
+	</group>
+	<group name="Nota_Fiscais">
+		<groupExpression><![CDATA[$F{Nota_Fiscais}]]></groupExpression>
+	</group>
+	<group name="Valor_Pago">
+		<groupExpression><![CDATA[$F{Valor_Pago}]]></groupExpression>
+	</group>
+	<group name="ID_Cadastro">
+		<groupExpression><![CDATA[$F{ID_Cadastro}]]></groupExpression>
+	</group>
+	<group name="Data">
+		<groupExpression><![CDATA[$F{Data}]]></groupExpression>
+	</group>
+	<group name="Valor_NF">
+		<groupExpression><![CDATA[$F{Valor_NF}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="550" height="40" uuid="5684e131-ca4f-4a63-ad51-b0eaac4a298d"/>
+				<box topPadding="11" leftPadding="11" bottomPadding="11" rightPadding="11">
+					<pen lineWidth="2.0" lineStyle="Double"/>
+					<topPen lineWidth="2.0" lineStyle="Double" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Double" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Double" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Double" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE EMPRESAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="70" height="20" uuid="f41743c6-af9a-4529-bf8d-ee167eefc524"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ID CADASTRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="10" width="100" height="20" uuid="35f18478-4d6b-4b2a-ac62-fe7a2ffaee17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EMPRESA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="10" width="90" height="20" uuid="3b0744c8-6327-4b19-b9bf-1b8671ecac92"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOTAS FISCAIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="10" width="70" height="20" uuid="0cfc478a-38c0-469d-a8ef-1df412481e5c"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="10" width="70" height="20" uuid="260df5a5-d317-4a96-b17f-76374157adc3"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[VALOR NF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="10" width="80" height="20" uuid="a64accb6-9670-4e5f-ac18-d7d8b3629cc7"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[VALOR PAGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="10" width="70" height="20" uuid="a14eaa91-0310-48ed-9f3f-cce11eb710b5"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[PONTUAÇÃO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="70" height="20" uuid="b76c2274-0c76-4a55-ae6b-208f7f58354b"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ID_Cadastro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="100" height="20" uuid="e5805ad6-59c5-4c01-ba4a-ec9d0070044f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nome_Empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="90" height="20" uuid="2747145c-dbe0-4d71-9c6d-521a4ca9953f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nota_Fiscais}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="70" height="20" uuid="cdc2f04f-8c3c-4f76-b2ad-41667b5d09e2"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="70" height="20" uuid="84497b2c-f398-4022-88e6-5b881317bc26"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Valor_NF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="80" height="20" uuid="24964d14-5417-4987-970d-1dbe534b685d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Valor_Pago}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
